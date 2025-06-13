@@ -1,18 +1,27 @@
 package com.bonggu.study.springcoreprinciple;
 
+import com.bonggu.study.springcoreprinciple.Order.OrderService;
+import com.bonggu.study.springcoreprinciple.Order.OrderServiceImpl;
 import com.bonggu.study.springcoreprinciple.member.Grade;
 import com.bonggu.study.springcoreprinciple.member.Member;
 import com.bonggu.study.springcoreprinciple.member.MemberService;
 import com.bonggu.study.springcoreprinciple.member.MemberServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MemberApp {
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        /**
+         * 스프링 컨테이터
+         * 모든 객체를 스프링 컨테이너에 등록하고 관리하기 위해
+         */
+        ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        MemberService memberService = appContext.getBean("memberService", MemberService.class);
 
         Member memberA = new Member(1L, "memberA", Grade.VIP);
         Member memberB = new Member(2L, "memberB", Grade.BASIC);
 
-         memberService.join(memberA);
+        memberService.join(memberA);
         memberService.join(memberB);
 
         Member findMemberA = memberService.findMember(memberA.getId());

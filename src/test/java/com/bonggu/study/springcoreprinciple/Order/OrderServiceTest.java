@@ -1,15 +1,25 @@
 package com.bonggu.study.springcoreprinciple.Order;
 
+import com.bonggu.study.springcoreprinciple.AppConfig;
 import com.bonggu.study.springcoreprinciple.member.Grade;
 import com.bonggu.study.springcoreprinciple.member.Member;
 import com.bonggu.study.springcoreprinciple.member.MemberService;
 import com.bonggu.study.springcoreprinciple.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class OrderServiceTest {
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    MemberService memberService;
+    OrderService orderService;
+
+    @BeforeEach
+    public void setUp() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+        orderService = appConfig.orderService();
+    }
+
 
     @Test
     void createOrder() {
