@@ -1,4 +1,4 @@
-package com.bonggu.study.springcoreprinciple.Order;
+package com.bonggu.study.springcoreprinciple.order;
 
 import com.bonggu.study.springcoreprinciple.discount.DiscountPolicy;
 import com.bonggu.study.springcoreprinciple.member.Member;

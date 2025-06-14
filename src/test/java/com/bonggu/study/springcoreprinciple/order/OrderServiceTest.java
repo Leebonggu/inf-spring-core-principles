@@ -1,10 +1,9 @@
-package com.bonggu.study.springcoreprinciple.Order;
+package com.bonggu.study.springcoreprinciple.order;
 
 import com.bonggu.study.springcoreprinciple.AppConfig;
 import com.bonggu.study.springcoreprinciple.member.Grade;
 import com.bonggu.study.springcoreprinciple.member.Member;
 import com.bonggu.study.springcoreprinciple.member.MemberService;
-import com.bonggu.study.springcoreprinciple.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

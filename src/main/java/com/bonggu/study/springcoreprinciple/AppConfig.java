@@ -1,7 +1,7 @@
 package com.bonggu.study.springcoreprinciple;
 
-import com.bonggu.study.springcoreprinciple.Order.OrderService;
-import com.bonggu.study.springcoreprinciple.Order.OrderServiceImpl;
+import com.bonggu.study.springcoreprinciple.order.OrderService;
+import com.bonggu.study.springcoreprinciple.order.OrderServiceImpl;
 import com.bonggu.study.springcoreprinciple.discount.DiscountPolicy;
 import com.bonggu.study.springcoreprinciple.discount.FixDiscountPolicy;
 import com.bonggu.study.springcoreprinciple.member.MemberService;

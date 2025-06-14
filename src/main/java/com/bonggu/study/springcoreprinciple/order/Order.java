@@ -1,4 +1,4 @@
-package com.bonggu.study.springcoreprinciple.Order;
+package com.bonggu.study.springcoreprinciple.order;
 
 public class Order {
     private Long id;

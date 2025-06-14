@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="memberService" class="com.bonggu.study.springcoreprinciple.member.MemberServiceImpl">
+        <constructor-arg ref="memberRepository" name="memberRepository"/>
+    </bean>
+    <bean id="memberRepository" class="com.bonggu.study.springcoreprinciple.member.MemoryMemberRepository"/>
+    <bean id="orderService" class="com.bonggu.study.springcoreprinciple.order.OrderServiceImpl">
+        <constructor-arg ref="memberRepository" name="memberRepository"/>
+        <constructor-arg ref="discountPolicy" name="discountPolicy"/>
+    </bean>
+    <bean id="discountPolicy" class="com.bonggu.study.springcoreprinciple.discount.RateDiscountPolicy"/>
+</beans>
